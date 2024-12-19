@@ -1,0 +1,251 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="snk.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand me-auto" href="https://finance.detik.com/solusiukm/d-6332248/pengertian-inventaris-tujuan-dan-cara-mengelolanya">Inventaris</a>
+        <button
+          class="navbar-toggler pe-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              Inventaris
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2 active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="index.html#about">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="index.html#daftar">Daftar Barang </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="form.html">Form</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="#">K&S</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+          <h2>Contact Us</h2>
+          <ul>
+            <li>
+              <i class="icon-location"></i>
+              25, Malang<br>
+              2024 Malang
+            </li>
+            <li>
+              <i class="icon-email"></i>
+              Inventaris@gmail.com
+            </li>
+            <li>
+              <i class="icon-skype"></i>
+              jurusan RPL
+            </li>
+            <li>
+              <i class="icon-phone"></i>
+              +33 619 530 144
+            </li>
+            <li class="social-icons">
+              <i class="icon-twitter"></i>
+              <i class="icon-facebook"></i>
+              <i class="icon-linkedin"></i>
+            </li>
+          </ul>
+        </div>
+    
+    <!-- akses link script app -->
+    <form action="https://script.google.com/macros/s/AKfycbwOCOsGPAQN9ks9ueG1s2QnKZ7sBlznQFu4GFRniLHmn2mRdERHhYnAEKfEVJ2Zt5G5/exec" method="post">
+    <!-- end akses  -->
+
+        <div class="contact-form">
+          <h2>Kritik & Saran</h2>
+          <p>Jika berkenan boleh mengisi</p>
+
+          <form id="form" class="container m-4 pl-4" method="POST">
+            <div class="field">
+              <label class="label">Nama </label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Masukan nama anda (optional)"
+                  name="nama"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Alamat Email</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="email"
+                  placeholder="xxxx@gmail.com (optional)"
+                  name="email"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Kritik dan Saran</label>
+              <div class="control">
+                <input class="input" type="text" placeholder="Isi Kritik / saran disini" name="kritik" required/>
+              </div>
+            </div>
+      
+      
+            <div class="field is-grouped" style="display: flex;justify-content: center; align-items: center;gap: 12px;">
+              <div class="control">
+                <button class="button is-primary" type="submit" id="submit-button">
+                  Kirim 
+                </button>
+              </div>
+            </div>
+          </form>
+          <div
+            id="message"
+            style="
+              display: none;
+              margin: 20px;
+              font-weight: bold;
+              color: rgb(5, 113, 5);
+              padding: 8px;
+              background-color: beige;
+              border-radius: 4px;
+              border-color: aquamarine;
+            "
+          ></div>
+      <br><br><br>
+          <script>
+            document.getElementById("form").addEventListener("submit", function (e) {
+              e.preventDefault(); // Prevent the default form submission
+              document.getElementById("message").textContent = "Submitting..";
+              document.getElementById("message").style.display = "block";
+              document.getElementById("submit-button").disabled = true;
+      
+              // Collect the form data
+              var formData = new FormData(this);
+              var keyValuePairs = [];
+              for (var pair of formData.entries()) {
+                keyValuePairs.push(pair[0] + "=" + pair[1]);
+              }
+      
+              var formDataString = keyValuePairs.join("&");
+      
+              fetch(
+                "https://script.google.com/macros/s/AKfycbw63WM5zVN4redSw-qwK8TUk_iDeT068Nr8brrl9UR8toKzU9fJdgAWQZNVwJIkoB10/exec",
+                {
+                  redirect: "follow",
+                  method: "POST",
+                  body: formDataString,
+                  headers: {
+                    "Content-Type": "text/plain;charset=utf-8",
+                  },
+                }
+              )
+                .then(function (response) {
+                  if (response) {
+                    return response; 
+                  } else {
+                    throw new Error("Failed to submit the form.");
+                  }
+                })
+                .then(function (data) {
+                  // Display a success message
+                  document.getElementById("message").textContent =
+                    "Data submitted successfully!";
+                  document.getElementById("message").style.display = "block";
+                  document.getElementById("message").style.backgroundColor = "green";
+                  document.getElementById("message").style.color = "beige";
+                  document.getElementById("submit-button").disabled = false;
+                  document.getElementById("form").reset();
+      
+                  setTimeout(function () {
+                    document.getElementById("message").textContent = "";
+                    document.getElementById("message").style.display = "none";
+                  }, 2600);
+                })
+                .catch(function (error) {
+                  console.error(error);
+                  document.getElementById("message").textContent =
+                    "An error occurred while submitting the form.";
+                  document.getElementById("message").style.display = "block";
+                });
+            });
+          </script> <box-icon type='solid' name='upvote' class="icon" size="lg"></box-icon>
+        <script type="text/javascript">
+          const tombol = document.querySelector(".tombol");
+          const menu = document.querySelector(".menu-navbar");
+      
+          tombol.addEventListener("click",() =>{
+            menu.classList.toggle("aktif");
+            document.querySelector('#about').scrollIntoView({
+        behavior: 'smooth'
+      });
+          });
+        </script>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+crossorigin="anonymous"
+></script>
+      
+        </body>
+      </html>
+
+<!--           
+          <form>
+            <input type="text" placeholder="Nama" id="name" required>
+            <input type="email" placeholder="Email" id="email" required>
+            <textarea placeholder="Saran & Kritik" id="massage" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+    
+</body>
+</html> -->

@@ -1,0 +1,309 @@
+.navbar {
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+  
+  .navbar-brand {
+    font-weight: 500;
+    color: #4f7b41;
+    font-size: 24px;
+    transition: 0.3s color;
+  }
+  
+  .login-button {
+    background-color: #4d7843;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #324a28;
+  }
+  
+  .navbar-toggler:focus,
+  .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .nav-link {
+    color: #54854c;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #324a28;
+  }
+  
+  @media (min-width: 991px) {
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #638e4c;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+    }
+  
+    .nav-link:hover::before,
+    .nav-link.active::before {
+      width: 100%;
+      visibility: visible;
+    }
+  }
+  
+ /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: #e0f0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .contact-container {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  /* Contact Info Styles */
+  .contact-info {
+    background: #687f42;
+    color: white;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .contact-info h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  
+  .contact-info ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info ul li i {
+    margin-right: 10px;
+  }
+  
+  .social-icons i {
+    font-size: 18px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .social-icons i:hover {
+    color: #85c074;
+  }
+  
+  /* Contact Form Styles */
+  .contact-form {
+    padding: 40px;
+    flex: 1.5;
+    background: white;
+  }
+  
+  .contact-form h2 {
+    font-size: 20px;
+    color: #5b773e;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form form input,
+  .contact-form form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form form input:focus,
+  .contact-form form textarea:focus {
+    border-color: #46602f;
+    outline: none;
+  }
+  
+  .contact-form form textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  .contact-form form button {
+    background: linear-gradient(to right, #4f6826, #7a9556);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form form button:hover {
+    background: linear-gradient(to right, #aaec63, #5c823d);
+  }
+  
+  /* Reset dan general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: #e0f7ff; /* Latar belakang yang lembut */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Form container */
+  form {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+  }
+  
+  /* Field styles */
+  .field {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #4d9fef;
+    box-shadow: 0 0 5px rgba(77, 159, 239, 0.5);
+    outline: none;
+  }
+  
+  /* Buttons */
+  .button {
+    background: #4d9fef;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: #3b8ad6;
+  }
+  
+  .button.is-primary {
+    background: #4caf50; /* Warna hijau untuk tombol kirim */
+  }
+  
+  .button.is-primary:hover {
+    background: #43a047;
+  }
+  
+  #reset-button {
+    background: #f44336; /* Warna merah untuk tombol reset */
+    color: white;
+  }
+  
+  #reset-button:hover {
+    background: #e53935;
+  }
+  
+  /* Field grouping for buttons */
+  .field.is-grouped {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    form {
+      padding: 20px;
+    }
+  
+    .button {
+      padding: 10px 15px;
+      font-size: 13px;
+    }
+  }
+  

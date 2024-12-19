@@ -1,0 +1,262 @@
+.navbar{
+  background-color: #fff;
+  height: 80px;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+
+.navbar-brand{
+font-weight: 500;
+color: #4f7b41;
+font-size: 24px;
+transition: 0.3s color;
+}
+
+.login-button {
+  background-color: #4d7843;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s background-color;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+  position: absolute; 
+  top: 50%;
+  left: 250px;
+  transform: translateY(-50%);
+  color: #324a28;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: #54854c;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover, .nav-link.active{
+  color: #324a28;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #638e4c;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before, .nav-link.active::before {
+      width: 100%;
+      visibility: visible;
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(asset/5cb78de8-eb74-4e0f-a415-5aa248b5eacb.jpeg);
+    background-size: cover;
+    color: #333;
+    padding-top: 80px; 
+  }
+
+  main {
+    margin-top: 30px;
+  }
+
+  .form-container {
+    background-color: rgba(122, 165, 96, 0.596);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(96, 144, 74, 0.1);
+    margin: 30px auto;
+    max-width: 700px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #466e32;
+    margin-bottom: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: #446a3d;
+    margin-bottom: 10px;
+  }
+  
+  input, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #7468686d;
+    font-size: 1.1rem;
+  }
+  
+  input:focus, button:focus {
+    outline: none;
+    border-color: #7eae75;
+  }
+  
+  button {
+    background-color: #59703b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.btn-primary {
+    background-color: #5c8b4a ; 
+    border-color: #28a745 ; 
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #67a84f ; 
+    border-color: #437c2e ; 
+  }
+  
+  .loan-list {
+    margin: 40px auto;
+    max-width: 90%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+  }
+  
+  table th, table td {
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  table th {
+    background-color: #608d43;
+    color: white;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  table td {
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  table .btn-info, table .btn-danger {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  table .btn-info {
+    background-color: #82bc4e;
+    border: none;
+  }
+  
+  table .btn-danger {
+    background-color: #3f7836;
+    border: none;
+  }
+  
+  table .btn-info:hover {
+    background-color: #517745;
+  }
+  
+  table .btn-danger:hover {
+    background-color: #7bb864;
+  }
+  
+  /* Print Section */
+  .print-section {
+    margin: 50px auto;
+    max-width: 700px;
+  }
+  
+  #receipt {
+    background-color: #8faf727b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #receipt h3 {
+    color: #4f7944;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  #receipt p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  #receipt button {
+    background-color: #458838;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #receipt button:hover {
+    background-color: #4d7a49;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-container {
+      width: 90%;
+      padding: 25px;
+    }
+  
+    table {
+      width: 100%;
+      font-size: 0.9rem;
+    }
+  
+    #receipt {
+      width: 90%;
+    }
+  }
+  
